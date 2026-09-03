@@ -16,7 +16,7 @@ Issue 1: Pylance Errors on initial inspection
     
 Issue 2: Liscensce Menu.sh returns invalid selection for all entries
 
- ![initial_run_Ls_Menu1](Artifacts/initial_run_Ls_Menu1)
+ ![initial_run_Ls_Menu1](Artifacts/initial_run_Ls_Menu1.png)
 
  ![initial_run_Ls_Menu2](Artifacts/initial_run_Ls_Menu2.png)
 
@@ -45,11 +45,11 @@ Issue 4: liscense_audit.py table display discrepancies. Seats used and seats pur
    ![liscense_Audit_check](Artifacts/liscense_Audit_Check.png)
 
 Issue 5: liscensce_menu.py failing to copy owner_summary.txt to archive.
-  ![final_Eval_Error](Artifacts/liscense_final_Eval_Error.png)
+  ![final_Eval_Error](Artifacts/Final_Eval_Error.png)
 
   Fix: Option 2 should be calling owner_summary.py
 
-  ![final_Eval_fix](Artifacts/liscense_final_Eval_fix.png)
+  ![final_Eval_fix](Artifacts/Final_Eval_fix.png)
 
 
 
