@@ -22,4 +22,4 @@
 * **Evaluator Script:** Replaced `python3` with `python` in `evaluate_lab.sh` so the automated grading tests could execute the scripts successfully.
 
 ## Final Successful Execution
-After applying the syntax and logic fixes across the bash and Python scripts, the application was run against the automated grader (`evaluate_lab.sh`). The execution was fully successful, resulting in **18 passed, 0 failed** (with proper archiving, report generation, and data validation).
+After applying the syntax and logic fixes across the bash and Python scripts, the application was run against the automated grader (`evaluate_lab.sh`). The execution was fully successful, resulting in **17 passed, 0 failed** (with proper archiving, report generation, and data validation).
