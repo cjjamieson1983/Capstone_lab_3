@@ -16,15 +16,15 @@ Issue 1: Pylance Errors on initial inspection
     
 Issue 2: Liscensce Menu.sh returns invalid selection for all entries
 
- ![Initial_run_Ls_Menu1](Artifacts/initial_run_Ls_Menu1)
+ ![initial_run_Ls_Menu1](Artifacts/initial_run_Ls_Menu1)
 
- ![Initial_run_Ls_Menu2](Artifacts/initial_run_Ls_Menu2.png)
+ ![initial_run_Ls_Menu2](Artifacts/initial_run_Ls_Menu2.png)
 
  Check: Verify variable references for accuracy
-    ![ls_menu_debugging_choice_selection1](Artifacts/ls_menu_debugging_choice_selection1)
+    ![ls_menu_debugging_choice_selection1](Artifacts/ls_menu_debugging_choice_selection1.png)
 
  Fix: Variable "$selection" is invalid. 
-    ![ls_menu_debugging_choice_selection2](Artifacts/ls_menu_debugging_choice_selection2)
+    ![ls_menu_debugging_choice_selection2](Artifacts/ls_menu_debugging_choice_selection2.png)
 
 Issue 3:Python Execution Errors
     ![2nd_pass_menu_run](Artifacts/2nd_pass_menu_run.png)
