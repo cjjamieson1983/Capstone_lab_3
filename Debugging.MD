@@ -34,6 +34,7 @@ Issue 3:Python Execution Errors
    ![add_liscense_2nd_run](Artifacts/add_liscense_2nd_run.png)
 
 Issue 4: liscense_audit.py table display discrepancies. Seats used and seats purchased are inverted. As well as the function to check seats used/seats purchased
+
    ![liscense_Audit_1st_run](Artifacts/liscense_Audit_1st_run.png)
 
    Fixes: Changed line 58 to-" if seats_used < seats_purchased:"
