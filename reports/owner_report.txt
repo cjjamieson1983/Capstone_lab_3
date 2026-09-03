@@ -1,0 +1,12 @@
+Skipping malformed record: badrecord
+Skipping invalid numeric value: Salesforce,Sales,200,185,abc,active
+Skipping malformed record: ExtraTool,IT,10,5,60,active,unexpected
+LICENSE AUDIT REPORT
+====================
+Slack | IT | used=118/120 | renewal=21 days | RENEWAL_REVIEW | SEATS_OK
+Zoom | Operations | used=52/80 | renewal=45 days | OK | SEATS_OK
+Figma | Design | used=29/25 | renewal=12 days | RENEWAL_REVIEW | OVER_ALLOCATED
+Notion | Product | used=41/60 | renewal=90 days | OK | SEATS_OK
+Tableau | Data | used=32/30 | renewal=-5 days | OVERDUE | OVER_ALLOCATED
+Miro | Design | used=18/40 | renewal=7 days | IGNORE | SEATS_OK
+GitHub | Engineering | used=96/100 | renewal=30 days | RENEWAL_REVIEW | SEATS_OK

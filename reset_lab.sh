@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$PROJECT_ROOT" || exit 1
+
+cat << 'DATA' > data/licenses.csv
+app_name,owner,seats_purchased,seats_used,days_until_renewal,status
+Slack,IT,120,118,21,active
+Zoom,Operations,80,52,45,active
+Figma,Design,25,29,12,active
+Notion,Product,60,41,90,active
+Tableau,Data,30,32,-5,active
+Miro,Design,40,18,7,inactive
+GitHub,Engineering,100,96,30,active
+badrecord
+Salesforce,Sales,200,185,abc,active
+ExtraTool,IT,10,5,60,active,unexpected
+DATA
+
+rm -f reports/*.txt archive/*.txt
+
+echo "Lab 3 reset complete."
