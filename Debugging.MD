@@ -3,10 +3,12 @@ Issue 1: Pylance Errors on initial inspection
     ![issue_1_Error](Artifacts/issue_1_Error.png)
     Fix:
     ![issue_1_Fix](Artifacts/issue_1_Fix.png)
+
   Pylance Error 2
     ![issue_2_Error](Artifacts/issue_2_Error.png)
      Fix:
      ![issue_2_Fix](Artifacts/issue_2_Fix.png)
+     
   Pylance Error 3
     ![issue_3_Error](Artifacts/issue_3_Error.png)
     Fix:
@@ -14,8 +16,8 @@ Issue 1: Pylance Errors on initial inspection
     
 Issue 2: Liscensce Menu.sh returns invalid selection for all entries
 
-    ![initial_run_ls_Menu1](Artifacts/initial_run_ls_Menu1.png)
-    ![initial_run_ls_Menu2](Artifacts/initial_run_ls_Menu2.png)
+ ![initial_run_ls_Menu1](Artifacts/initial_run_ls_Menu1)
+ ![initial_run_ls_Menu2](Artifacts/initial_run_ls_Menu2.png)
 
  Check: Verify variable references for accuracy
     ![ls_menu_debugging_choice_selection1](Artifacts/ls_menu_debugging_choice_selection1)
