@@ -72,7 +72,7 @@ rm -f reports/*.txt archive/*.txt
 echo "Running Lab 3 functional evaluation..."
 echo
 
-LICENSE_OUTPUT="$(py scripts/license_audit.py 2>&1)"
+LICENSE_OUTPUT="$(python3 scripts/license_audit.py 2>&1)"
 LICENSE_EXIT_CODE=$?
 
 if [ "$LICENSE_EXIT_CODE" -eq 0 ]; then
@@ -86,7 +86,7 @@ check_contains "license audit flags Figma seat over-allocation" "$LICENSE_OUTPUT
 check_contains "license audit flags Tableau overdue and over-allocated" "$LICENSE_OUTPUT" "Tableau | Data | used=32/30 | renewal=-5 days | OVERDUE | OVER_ALLOCATED"
 check_contains "license audit ignores inactive Miro renewal" "$LICENSE_OUTPUT" "Miro | Design | used=18/40 | renewal=7 days | IGNORE | SEATS_OK"
 
-SUMMARY_OUTPUT="$(py scripts/owner_summary.py 2>&1)"
+SUMMARY_OUTPUT="$(python3 scripts/owner_summary.py 2>&1)"
 SUMMARY_EXIT_CODE=$?
 
 if [ "$SUMMARY_EXIT_CODE" -eq 0 ]; then
@@ -99,7 +99,7 @@ check_contains "owner summary counts IT" "$SUMMARY_OUTPUT" "IT: 1"
 check_contains "owner summary counts Design active licenses only" "$SUMMARY_OUTPUT" "Design: 1"
 check_contains "owner summary counts Engineering" "$SUMMARY_OUTPUT" "Engineering: 1"
 
-ADD_OUTPUT="$(printf 'Asana\nOperations\n50\n38\n28\nactive\n' | py scripts/add_license.py 2>&1)"
+ADD_OUTPUT="$(printf 'Asana\nOperations\n50\n38\n28\nactive\n' | python3 scripts/add_license.py 2>&1)"
 ADD_EXIT_CODE=$?
 
 if [ "$ADD_EXIT_CODE" -eq 0 ]; then
@@ -115,7 +115,7 @@ else
 fi
 
 cp data/licenses.csv "$TEMP_DIR/before_invalid_add.csv"
-INVALID_ADD_OUTPUT="$(printf '\nOperations\n50\n38\n28\nactive\n' | py scripts/add_license.py 2>&1)"
+INVALID_ADD_OUTPUT="$(printf '\nOperations\n50\n38\n28\nactive\n' | python3 scripts/add_license.py 2>&1)"
 INVALID_ADD_EXIT_CODE=$?
 
 if [ "$INVALID_ADD_EXIT_CODE" -eq 0 ] && cmp -s "$TEMP_DIR/before_invalid_add.csv" data/licenses.csv; then

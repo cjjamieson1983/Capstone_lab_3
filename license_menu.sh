@@ -24,15 +24,15 @@ do
 
     case "$choice" in
         1)
-            py scripts/license_audit.py > reports/license_report.txt
+            python3 scripts/license_audit.py > reports/license_report.txt
             echo "License report generated."
             ;;
         2)
-            py scripts/owner_summary.py > reports/owner_report.txt
+            python3 scripts/owner_summary.py > reports/owner_report.txt
             echo "Owner report generated."
             ;;
         3)
-            py scripts/add_license.py
+            python3 scripts/add_license.py
             ;;
         4)
             cp reports/*.txt archive/

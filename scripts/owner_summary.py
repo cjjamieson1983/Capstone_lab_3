@@ -28,7 +28,7 @@ with open("data/licenses.csv", "r") as file:
             continue
 
         if owner in owner_counts:
-            owner_counts[owner] += 1
+            owner_counts[owner] = 1
         else:
             owner_counts[owner] = 1
 
