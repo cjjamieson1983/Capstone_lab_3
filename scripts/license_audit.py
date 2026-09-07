@@ -50,7 +50,7 @@ for license_record in licenses:
         renewal_status = "IGNORE"
     elif days_until_renewal < 0:
         renewal_status = "OVERDUE"
-    elif days_until_renewal <= 30
+    elif days_until_renewal <= 30:
         renewal_status = "RENEWAL_REVIEW"
     else:
         renewal_status = "OK"

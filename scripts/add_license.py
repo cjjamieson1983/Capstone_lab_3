@@ -8,7 +8,7 @@ status = input("Status: ")
 if app_name == "" or owner == "":
     print("Application name and owner are required.")
 
-elif not seats_purchased.isdigit() or not seats_used.isdigit() or not days_until_renewal.lstrip("-").isdigit()
+elif not seats_purchased.isdigit() or not seats_used.isdigit() or not days_until_renewal.lstrip("-").isdigit():
     print("Seat counts and renewal days must be whole numbers.")
 
 elif status != "active" and status != "inactive":

@@ -1,0 +1,73 @@
+diff --git a/data/licenses.csv b/data/licenses.csv
+index 99df7b6..25f108e 100644
+--- a/data/licenses.csv
++++ b/data/licenses.csv
+@@ -9,3 +9,5 @@ GitHub,Engineering,100,96,30,active
+ badrecord
+ Salesforce,Sales,200,185,abc,active
+ ExtraTool,IT,10,5,60,active,unexpected
++Booyaka,nanufacturing,6,3,77,active
++McDOnaland,legal,30,24,33,active
+diff --git a/license_menu.sh b/license_menu.sh
+index 57e2f1a..12532f9 100644
+--- a/license_menu.sh
++++ b/license_menu.sh
+@@ -3,6 +3,10 @@
+ PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
+ cd "$PROJECT_ROOT" || exit 1
+ 
++# Create two directories
++mkdir -p $PROJECT_ROOT/reports
++mkdir -p $PROJECT_ROOT/archive
++
+ while true
+ do
+     echo
+@@ -22,17 +26,17 @@ do
+         exit 1
+     fi
+ 
+-    case "$selection" in
++    case "$choice" in
+         1)
+-            python3 scripts/license_audit.py > reports/license_report.txt
++            py scripts/license_audit.py > reports/license_report.txt
+             echo "License report generated."
+             ;;
+         2)
+-            python3 scripts/license_audit.py > reports/owner_report.txt
++            py scripts/license_audit.py > reports/owner_report.txt
+             echo "Owner report generated."
+             ;;
+         3)
+-            python3 scripts/add_license.py
++            py scripts/add_license.py
+             ;;
+         4)
+             cp reports/*.txt archive/
+diff --git a/scripts/add_license.py b/scripts/add_license.py
+index 30d4c01..b91f9bc 100644
+--- a/scripts/add_license.py
++++ b/scripts/add_license.py
+@@ -8,7 +8,7 @@ status = input("Status: ")
+ if app_name == "" or owner == "":
+     print("Application name and owner are required.")
+ 
+-elif not seats_purchased.isdigit() or not seats_used.isdigit() or not days_until_renewal.lstrip("-").isdigit()
++elif not seats_purchased.isdigit() or not seats_used.isdigit() or not days_until_renewal.lstrip("-").isdigit():
+     print("Seat counts and renewal days must be whole numbers.")
+ 
+ elif status != "active" and status != "inactive":
+diff --git a/scripts/license_audit.py b/scripts/license_audit.py
+index 4cae5b7..d953dbc 100644
+--- a/scripts/license_audit.py
++++ b/scripts/license_audit.py
+@@ -50,7 +50,7 @@ for license_record in licenses:
+         renewal_status = "IGNORE"
+     elif days_until_renewal < 0:
+         renewal_status = "OVERDUE"
+-    elif days_until_renewal <= 30
++    elif days_until_renewal <= 30:
+         renewal_status = "RENEWAL_REVIEW"
+     else:
+         renewal_status = "OK"

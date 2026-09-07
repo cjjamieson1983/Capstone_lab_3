@@ -3,6 +3,10 @@
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$PROJECT_ROOT" || exit 1
 
+# Create two directories
+mkdir -p $PROJECT_ROOT/reports
+mkdir -p $PROJECT_ROOT/archive
+
 while true
 do
     echo
@@ -22,17 +26,17 @@ do
         exit 1
     fi
 
-    case "$selection" in
+    case "$choice" in
         1)
-            python3 scripts/license_audit.py > reports/license_report.txt
+            py scripts/license_audit.py > reports/license_report.txt
             echo "License report generated."
             ;;
         2)
-            python3 scripts/license_audit.py > reports/owner_report.txt
+            py scripts/license_audit.py > reports/owner_report.txt
             echo "Owner report generated."
             ;;
         3)
-            python3 scripts/add_license.py
+            py scripts/add_license.py
             ;;
         4)
             cp reports/*.txt archive/
