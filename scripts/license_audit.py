@@ -41,8 +41,8 @@ print("====================")
 for license_record in licenses:
     app_name = license_record[0]
     owner = license_record[1]
-    seats_purchased = license_record[3]
-    seats_used = license_record[2]
+    seats_purchased = license_record[2]
+    seats_used = license_record[3]
     days_until_renewal = license_record[4]
     status = license_record[5]
 
@@ -55,9 +55,9 @@ for license_record in licenses:
     else:
         renewal_status = "OK"
 
-    if seats_used < seats_purchased:
+    if seats_used > seats_purchased:
         seat_status = "OVER_ALLOCATED"
     else:
         seat_status = "SEATS_OK"
 
-    print(f"{app_name} | {owner} | used={seats_purchased}/{seats_used} | renewal={days_until_renewal} days | {renewal_status} | {seat_status}")
+    print(f"{app_name} | {owner} | used={seats_used}/{seats_purchased} | renewal={days_until_renewal} days | {renewal_status} | {seat_status}")

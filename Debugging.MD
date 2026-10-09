@@ -45,6 +45,10 @@ Issue 4: liscense_audit.py table display discrepancies. Seats used and seats pur
    Checks out against Expected output
    ![liscense_Audit_check](Artifacts/liscense_Audit_Check.png)
 
+   Note: This is a False Positive. As outlined in the read me this required an index mapping correction
+   ![Index_map_error](Artifacts/Index_map_error.png)
+   ![Index_map_fix](Artifacts/Index_map_fix.png)
+
 Issue 5: liscensce_menu.py failing to copy owner_summary.txt to archive.
   ![final_Eval_Error](Artifacts/Final_Eval_Error.png)
 
